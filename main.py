@@ -1,16 +1,8 @@
-import subprocess
-import os
+import shellmodule
+
 
 def main():
-    while True:
-        current_directory = os.getcwd()
-        command = input("/" + current_directory.split("/")[-1] + " $ ")
-        if command == "quit":
-            break
-        if command == "pwd":
-            print(current_directory)
-        else:
-            print(command)
+    shellmodule.shell_loop()
 
 
 if __name__ == '__main__':
